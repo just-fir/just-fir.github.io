@@ -1,4 +1,24 @@
-<img src="./satire.png" style="max-width:75%;height:40%;">
+<style>
+.ifeelsofir {
+    width: min(500px, 100vw);
+    height: min(520px, 100vh);
+    background: url(./satire.png), url(./satire_xor.png);
+    background-position-x: 0%, 20px;
+    transition: 0.2s background-position-x, 0.3s filter cubic-bezier(0, 1, 0, 1);
+    background-repeat: no-repeat;
+    position: relative;
+    display: block;
+    background-size: contain;
+    &:hover, &:focus {
+        transition: 1s background-position-x cubic-bezier(0.34, 1.56, 0.64, 1), 1.2s filter cubic-bezier(0.9999, 0, 0.9999, 0);
+        background-blend-mode: difference;
+        filter: saturate(0) brightness(5);
+        background-position-x: 0%, 0%;
+    }
+}
+</style>
+
+<div class="ifeelsofir" tabindex="0"></div>
 <hr>
 Projects:
 <ul>
